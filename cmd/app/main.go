@@ -9,10 +9,10 @@ import (
 	"github.com/jmoiron/sqlx"
 	_ "github.com/lib/pq"
 
-	"db-transaction-example/internal/app"
-	srvhttp "db-transaction-example/internal/platform/http"
-	"db-transaction-example/internal/platform/postgres"
-	"db-transaction-example/internal/platform/service"
+	"go-transaction-example/internal/app"
+	srvhttp "go-transaction-example/internal/platform/http"
+	"go-transaction-example/internal/platform/postgres"
+	"go-transaction-example/internal/platform/service"
 )
 
 func mustNotFail(err error) {

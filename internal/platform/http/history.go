@@ -7,7 +7,7 @@ import (
 
 	"go.uber.org/zap"
 
-	"db-transaction-example/internal/app"
+	"go-transaction-example/internal/app"
 )
 
 func listHistory(srv app.Service, logger *zap.Logger) http.HandlerFunc {

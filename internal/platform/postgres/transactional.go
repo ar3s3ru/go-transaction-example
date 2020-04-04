@@ -6,7 +6,7 @@ import (
 
 	"github.com/jmoiron/sqlx"
 
-	"db-transaction-example/internal/domain/user"
+	"go-transaction-example/internal/domain/user"
 )
 
 type transactionKey struct{}

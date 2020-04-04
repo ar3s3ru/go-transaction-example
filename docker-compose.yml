@@ -5,7 +5,7 @@ services:
       context: .
       dockerfile: Dockerfile
     volumes:
-      - ./:/go/src/db-transaction-example
+      - ./:/go/src/go-transaction-example
     ports:
       - "8080:8080"
     depends_on:

@@ -1,6 +1,6 @@
 go 1.14
 
-module db-transaction-example
+module go-transaction-example
 
 require (
 	github.com/go-chi/chi v4.1.0+incompatible

@@ -1,6 +1,6 @@
 FROM golang:1.14-alpine AS builder
 
-WORKDIR /go/src/db-transaction-example
+WORKDIR /go/src/go-transaction-example
 
 # We want to use `make install`
 RUN apk add --update bash make

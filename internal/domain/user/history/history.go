@@ -6,8 +6,8 @@ import (
 
 	"github.com/jmoiron/sqlx/types"
 
-	"db-transaction-example/internal/domain"
-	"db-transaction-example/internal/domain/user"
+	"go-transaction-example/internal/domain"
+	"go-transaction-example/internal/domain/user"
 )
 
 type Action string

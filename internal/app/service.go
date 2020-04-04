@@ -4,8 +4,8 @@ import (
 	"context"
 	"time"
 
-	"db-transaction-example/internal/domain/user"
-	"db-transaction-example/internal/domain/user/history"
+	"go-transaction-example/internal/domain/user"
+	"go-transaction-example/internal/domain/user/history"
 )
 
 type Service struct {

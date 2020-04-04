@@ -6,8 +6,8 @@ import (
 
 	"github.com/jmoiron/sqlx"
 
-	"db-transaction-example/internal/app"
-	"db-transaction-example/internal/domain/user"
+	"go-transaction-example/internal/app"
+	"go-transaction-example/internal/domain/user"
 )
 
 type UserRepository struct{}

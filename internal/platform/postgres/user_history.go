@@ -9,8 +9,8 @@ import (
 	"github.com/jmoiron/sqlx"
 	"github.com/jmoiron/sqlx/types"
 
-	"db-transaction-example/internal/domain/user"
-	"db-transaction-example/internal/domain/user/history"
+	"go-transaction-example/internal/domain/user"
+	"go-transaction-example/internal/domain/user/history"
 )
 
 type UserHistory struct {

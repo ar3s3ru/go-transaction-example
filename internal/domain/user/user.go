@@ -3,7 +3,7 @@ package user
 import (
 	"context"
 
-	"db-transaction-example/internal/domain"
+	"go-transaction-example/internal/domain"
 )
 
 type ID int64

@@ -12,7 +12,7 @@ import (
 	"github.com/go-chi/chi/middleware"
 	"go.uber.org/zap"
 
-	"db-transaction-example/internal/app"
+	"go-transaction-example/internal/app"
 )
 
 func Router(srv app.Service, logger *zap.Logger) http.Handler {
