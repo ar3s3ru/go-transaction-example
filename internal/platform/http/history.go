@@ -22,7 +22,7 @@ func listHistory(srv app.Service, logger *zap.Logger) http.HandlerFunc {
 
 		to := time.Now()
 		if ts := r.URL.Query().Get("to"); ts != "" {
-			if to, err = time.Parse(time.RFC822, ts); err != nil {
+			if to, err = time.Parse(time.RFC3339, ts); err != nil {
 				writeJSON(ctx, w, http.StatusBadRequest, WrapError(err), logger)
 				return
 			}
@@ -37,7 +37,7 @@ func listHistory(srv app.Service, logger *zap.Logger) http.HandlerFunc {
 		case err != nil:
 			writeJSON(ctx, w, http.StatusInternalServerError, WrapError(err), logger)
 		default:
-			writeJSON(ctx, w, http.StatusCreated, history, logger)
+			writeJSON(ctx, w, http.StatusOK, history, logger)
 		}
 	}
 }
