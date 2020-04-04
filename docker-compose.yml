@@ -1,0 +1,41 @@
+version: "3"
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/go/src/db-transaction-example
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres
+      - app-migrate
+
+  app-migrate:
+    image: migrate/migrate
+    volumes:
+      - ./resources/migrations:/migrations
+    depends_on:
+      - postgres
+    restart: on-failure
+    command:
+      - "-database"
+      - "postgres://app_user:app_password@postgres:5432/app_db?sslmode=disable"
+      - "-path"
+      - "/migrations"
+      - "up"
+
+  postgres:
+    image: postgres:12
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: app_user
+      POSTGRES_PASSWORD: app_password
+      POSTGRES_DB: app_db
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 30s
+      timeout: 30s
+      retries: 5
