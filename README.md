@@ -189,6 +189,10 @@ all these modifications happen in a chain of decorators.
 
 But we **need** to use a database transaction to execute side-effects...
 
+<div align="center">
+    <img width="240" src="https://media.giphy.com/media/TjS7u7yoMC2KubI5wE/giphy.gif">
+</div>
+
 ### `context.Context` to the rescue!
 
 From the [Go Blog](https://blog.golang.org/context):
