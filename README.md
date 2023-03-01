@@ -3,6 +3,14 @@
 An example application to show independent `*sql.Tx` propagation over
 different decoration layers, for separation of concerns.
 
+> ⚠️ **NOTE:** after gaining more experience on the topic, this is **NOT** the way I would suggest approaching the problem described in [Context](#context).
+>
+> Use the **Aggregate Root pattern** to record & **collect Domain Events** when handling Commands (i.e. state changes) on a Domain Model.
+> Commit the Model changes and the Domain Events in your Repository layer at the same time using a transaction.
+> **Bonus:** embrace Event Sourcing where it makes sense, so your Model state derives from the Domain Events committed to the database.
+>
+> Head over to [go-eventually](https://github.com/get-eventually/go-eventually) and check the `examples` projects to get a better picture of what that looks like :smile:
+
 - [go-transaction-example](#go-transaction-example)
   - [Context](#context)
   - [Problem](#problem)
